@@ -33,24 +33,23 @@ public class AppCadastro {
                     //int id = sc.nextInt();
                     //PJuridica.setId(id);
                     System.out.print("Informe o CNPJ da empresa: ");
-                    int cnpj = sc.nextInt();
-                    PJuridica.setCNPJ(cnpj);
+                    //int cnpj = sc.nextInt();
+                    PJuridica.setCNPJ(sc.nextInt());
                     System.out.print("Informe o nome fantasia da empresa: ");
-                    String nomeJ = sc.nextLine();
-                    PJuridica.setNome(nomeJ);
+                    //String nomeJ = sc.nextLine();
+                    PJuridica.setNome(sc.next());
                     System.out.print("Informe o telefone para cadastro: ");
-                    String telefoneJ = sc.nextLine();
-                    PJuridica.setTelefone(telefoneJ);
+                    //String telefoneJ = sc.nextLine();
+                    PJuridica.setTelefone(sc.next());
                     System.out.println("Informe o Endereço com Número e complemento: ");
-                    String enderecoJ = sc.nextLine();
-                    PJuridica.setEndereco(enderecoJ);
+                    //String enderecoJ = sc.nextLine();
+                    PJuridica.setEndereco(sc.next());
                     System.out.print("Informe a cidade para cadastro: ");
-                    String cidadeJ = sc.nextLine();
-                    PJuridica.setCidade(cidadeJ);
+                    //String cidadeJ = sc.nextLine();
+                    PJuridica.setCidade(sc.next());
                     System.out.print("Informe o estado para cadastro: ");
-                    String estadoJ = sc.nextLine();
-                    PJuridica.setEstado(estadoJ);
-                    sc.next();
+                    //String estadoJ = sc.nextLine();
+                    PJuridica.setEstado(sc.next());
 
                     objCadastro.inserirCadastroJurudica(PJuridica);
 
@@ -61,9 +60,8 @@ public class AppCadastro {
                     int idF = sc.nextInt();
                     PFisica.setId(idF);
                     System.out.print("Informe um nome para cadastro: ");
-                    PFisica.setNome(sc.nextLine());
-                    //String nomeF = sc.nextLine();
-                    //PFisica.setNome(nomeF);
+                    //String nomeF = sc.next();
+                    PFisica.setNome(sc.next());
                     while (scape == 0) {
                         System.out.print("informe a Idade para cadastro: ");
                         int idadeF = sc.nextInt();
@@ -75,27 +73,27 @@ public class AppCadastro {
                             scape = 1;
                         }
                     }
-                    sc.next();
                     System.out.print("Informe o nome do Pai do Cadastrado: ");
-                    String NomePaiF = sc.nextLine();
-                    PFisica.setNomeDoPai(NomePaiF);
+                    //String NomePaiF = sc.nextLine();
+                    PFisica.setNomeDoPai(sc.next());
                     System.out.print("Informe o nome da Mãe do Cadastrado: ");
-                    String NomeMaeF = sc.nextLine();
-                    PFisica.setNomeDaMae(NomeMaeF);
+                    //String NomeMaeF = sc.nextLine();
+                    PFisica.setNomeDaMae(sc.next());
                     System.out.print("Informe o CPF para cadastro: ");
                     int cpf = sc.nextInt();
                     PFisica.setCPF(cpf);
                     System.out.print("Informe um telefone para cadastro: ");
-                    String telefoneF = sc.nextLine();
-                    PFisica.setTelefone(telefoneF);
+                   // String telefoneF = sc.nextLine();
+                    PFisica.setTelefone(sc.next());
                     System.out.print("Informe o endereço com Numéro: ");
-                    String enderecoF = sc.nextLine();
+                    //String enderecoF = sc.nextLine();
+                    PFisica.setEndereco(sc.next());
                     System.out.print("Informe a cidade: ");
-                    String cidadeF = sc.nextLine();
-                    PFisica.setCidade(cidadeF);
+                    //String cidadeF = sc.nextLine();
+                    PFisica.setCidade(sc.next());
                     System.out.print("Informe o Estado: ");
-                    String estadoF = sc.nextLine();
-                    PFisica.setEstado(estadoF);
+                    //String estadoF = sc.nextLine();
+                    PFisica.setEstado(sc.next());
                     System.out.print("Informe o valor do salário recebido: ");
                     if (PFisica.getIdade() <= 20) {
                         float salarioF = sc.nextFloat();
