@@ -28,7 +28,7 @@ public class ServicoRemotoImpl extends UnicastRemoteObject implements IServicoRe
     public static void main(String[] args) {
         try{
             ServicoRemotoImpl chatBot = new ServicoRemotoImpl();
-            Naming.rebind("Chatbot", chatBot);
+            Naming.rebind("rmi://192.168.1.6/ChatBopApp", chatBot);
         }catch (Exception e){
             System.out.println("ServicoRemotoImpl erro: "+ e.getMessage());
             e.printStackTrace();

@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a7baf2-4663-4672-a904-fd0b04b6a287" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ChatBotApp/ChatBotApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Ex_Aula2/CadastroApp/src/main/java/org/example/AppCadastro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex_Aula2/CadastroApp/src/main/java/org/example/AppCadastro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Ex_Aula2/CadastroApp/target/classes/org/example/AppCadastro.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ex_Aula2/CadastroApp/target/classes/org/example/AppCadastro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatBotApp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotApp/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatBotApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatBotApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotApp/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChatBotApp/src/main/java/org/example/ChatBotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotApp/src/main/java/org/example/ChatBotApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/IServicoRemoto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/IServicoRemoto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ServicoRemotoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ServicoRemotoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Service/src/main/java/org/example/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/src/main/java/org/example/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Service/target/classes/org/example/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/target/classes/org/example/Service.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +63,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ChatBotApp">
+  <component name="RunManager" selected="Application.Service">
     <configuration name="ChatBotApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.ChatBotApp" />
       <module name="ChatBotApp" />
@@ -107,8 +92,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChatBotApp" />
         <item itemvalue="Application.Service" />
+        <item itemvalue="Application.ChatBotApp" />
       </list>
     </recent_temporary>
   </component>

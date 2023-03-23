@@ -9,10 +9,10 @@ public class Service {
     public Service() throws RemoteException {
 
         try{
-            LocateRegistry.createRegistry(8282);
+
             System.out.println("Inicio");
 
-            Naming.rebind("rmi://localhost:8282/ChatBotApp", new ServicoRemotoImpl());
+            Naming.rebind("rmi://192.168.1.6:8282/ChatBotApp", new ServicoRemotoImpl());
             System.out.println("Fim");
             /*for (Message messageuser : MsgUser.listarMensagem()){
             }*/

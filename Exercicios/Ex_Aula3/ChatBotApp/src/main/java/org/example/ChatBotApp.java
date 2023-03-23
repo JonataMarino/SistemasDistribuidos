@@ -10,7 +10,7 @@ import java.rmi.RemoteException;
 public class ChatBotApp {
     public static void main(String[] args) throws RemoteException {
         try {
-            IServicoRemoto MsgUser = (IServicoRemoto) Naming.lookup("rmi://localhost:8282/ChatBotApp");
+            IServicoRemoto MsgUser = (IServicoRemoto) Naming.lookup("rmi://192.168.1.6:8282/ChatBotApp");
             String message = JOptionPane.showInputDialog("Digite uma mensagem");
             String resposta= MsgUser.talk(message);
             JOptionPane.showMessageDialog(null, resposta);
