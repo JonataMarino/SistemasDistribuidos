@@ -10,13 +10,12 @@ import java.rmi.RemoteException;
 public class ChatBotApp {
     public static void main(String[] args) throws RemoteException {
         try {
-            IServicoRemoto MsgUser = (IServicoRemoto) Naming.lookup("rmi://192.168.1.6:8282/ChatBotApp");
-            String message = JOptionPane.showInputDialog("Digite uma mensagem");
-            String resposta= MsgUser.talk(message);
+            IServicoRemoto MsgUser = (IServicoRemoto) Naming.lookup("rmi://localhost:8282/ChatBopApp");
+            String input = JOptionPane.showInputDialog("Digite uma mensagem");
+            //String message = JOptionPane.showInputDialog("Digite uma mensagem");
+            String resposta = MsgUser.talk(input);
             JOptionPane.showMessageDialog(null, resposta);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        } catch (NotBoundException e) {
+        } catch (MalformedURLException | NotBoundException e) {
             throw new RuntimeException(e);
         }
     }

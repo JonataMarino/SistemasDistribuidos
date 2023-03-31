@@ -1,34 +1,37 @@
 package org.example;
 
+import com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
+
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ServicoRemotoImpl extends UnicastRemoteObject implements IServicoRemoto {
     public ServicoRemotoImpl() throws RemoteException{
         super();
     }
-    public String talk(String Message) throws RemoteException{
+    public String talk(String message) throws RemoteException{
+        String input = Arrays.toString(message.split(" "));
         String resposta = "";
-        if (Message.contains("Oi") || Message.contains("Ola")){
+        if (input.contains("Oi") || input.contains("Ola")){
             resposta = "Olá! em que posso ajudar ?";
-        }else if (Message.contains("Boa Tarde") || Message.contains("boa tarde")) {
+        }else if (input.contains("Boa Tarde") || input.contains("boa tarde")) {
             resposta = "Boa Tarde! Como posso ajudar ?";
-        }else if (Message.contains("Bom dia") || Message.contains("bom dia") ){
+        }else if (input.contains("Bom dia") || input.contains("bom dia") ){
             resposta = "Bom dia! em que posso ajudar ?";
         }else{
-            resposta = "Não sei responder a isso";
+           resposta = "Desculpe, não entendi o que quis dizer";
         }
-
         return resposta;
     }
 
     public static void main(String[] args) {
         try{
             ServicoRemotoImpl chatBot = new ServicoRemotoImpl();
-            Naming.rebind("rmi://192.168.1.6/ChatBopApp", chatBot);
+            Naming.rebind("rmi://localhost:8282/ChatBopApp", chatBot);
         }catch (Exception e){
             System.out.println("ServicoRemotoImpl erro: "+ e.getMessage());
             e.printStackTrace();

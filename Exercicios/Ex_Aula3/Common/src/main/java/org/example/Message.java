@@ -2,8 +2,15 @@ package org.example;
 
 import java.io.Serializable;
 
-//public class Message extends User implements Serializable{
-// ao criar atributos quebra a leitura no app
+public class Message implements Serializable{
+ String respostaDada = "";
 
-//    }
+    public String getRespostaDada() {
+        return respostaDada;
+    }
 
+    public void setRespostaDada(String respostaDada) {
+        this.respostaDada = respostaDada;
+    }
+}
+//

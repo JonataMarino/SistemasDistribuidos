@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a7baf2-4663-4672-a904-fd0b04b6a287" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../EX_Aula3(2)/Chat (1).rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatBotApp/ChatBotApp.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChatBotApp/src/main/java/org/example/ChatBotApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatBotApp/src/main/java/org/example/ChatBotApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ServicoRemotoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ServicoRemotoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ServicoRemotoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ServicoRemotoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Service/src/main/java/org/example/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/src/main/java/org/example/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Service/target/classes/org/example/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Service/target/classes/org/example/Service.class" afterDir="false" />
     </list>
@@ -36,11 +45,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2N7EtXMHMn7WnrLYNq2RrnqVqQk" />
   <component name="ProjectViewState">
@@ -56,14 +63,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Logaatti-7termo/SistemasDistribuidos/Exercicios/Ex_Aula3/Service&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Logaatti-7termo/SistemasDistribuidos/Exercicios/Ex_Aula3/Common&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Service">
+  <component name="RunManager" selected="Application.ChatBotApp">
     <configuration name="ChatBotApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.ChatBotApp" />
       <module name="ChatBotApp" />
@@ -92,8 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Service" />
         <item itemvalue="Application.ChatBotApp" />
+        <item itemvalue="Application.Service" />
       </list>
     </recent_temporary>
   </component>
@@ -107,5 +114,10 @@
       <updated>1679006936516</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Common$ChatBotApp.ic" NAME="ChatBotApp Coverage Results" MODIFIED="1679858826176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>
