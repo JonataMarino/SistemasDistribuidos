@@ -18,8 +18,8 @@ public class ChatServiceImpl extends UnicastRemoteObject implements ChatService 
     }
 
     @Override
-    public String getChatHistory() throws RemoteException { // Percorre chatHistory, retornando uma string que contem todas as mensagens e adiciona cada uma delas separada por uma quebra de linha no objeto StringBuilder.
-        StringBuilder sb = new StringBuilder();
+    public String getChatHistory() throws RemoteException { // Percorre chatHistory, retornando uma string que contem todas as mensagens
+        StringBuilder sb = new StringBuilder();                    //e adiciona cada uma delas separada por uma quebra de linha no objeto StringBuilder.
         for (String message : this.chatHistory) {
             sb.append(message);
             sb.append("\n");

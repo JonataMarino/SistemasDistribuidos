@@ -1,67 +1,103 @@
 import javax.swing.*;
 import java.awt.*;
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 public class ChatPanel extends JPanel {
-    private ChatService chatService; //chatService é um objeto da interface ChatService que é usado para enviar e receber mensagens.
-    private JTextArea chatArea; //chatArea é um objeto da classe JTextArea que é usada para exibir a caixa de texto com as mensagens.
-    private JTextField nameField;// nameField é um objeto da classe JTextField que é usada para obter o nome do remetente da mensagem.
-    private JTextField messageField; //messageField é um objeto da classe JTextField que é usada para obter a mensagem digitada pelo usuário.
+    private ChatService chatService;
+    private JTextArea chatArea;
+    private JTextField nameField;
+    private JTextField messageField;
 
-    public ChatPanel(ChatService chatService) { //No construtor, passamos o objeto chatService como parâmetro, e em seguida, definimos o layout do painel como um BorderLayout.
-        this.chatService = chatService; //inicializa a variável de instância chatService com a instância passada como argumento no construtor.
+    public ChatPanel(ChatService chatService) {
+        this.chatService = chatService;
 
-        setLayout(new BorderLayout()); //Este comando define o layout do painel como um layout de borda. Isso significa que os componentes adicionados ao painel serão organizados ao longo das bordas do painel.
+        setLayout(new BorderLayout());
 
-        chatArea = new JTextArea(10, 40); //Em seguida, criamos a caixa de texto chatArea com as dimensões 10 e 40, indicando que ela deve ter 10 linhas e 40 colunas. Em seguida, definimos que ela não pode ser editável. Em seguida, criamos um objeto JScrollPane com a caixa de texto chatArea e adicionamos esse objeto ao pain
-        chatArea.setEditable(false);  //define que o usuário não pode editar o texto da chatArea.
-        JScrollPane scrollPane = new JScrollPane(chatArea); //Cria um JScrollPane que contém o chatArea, que exibe as mensagens do chat.
-        add(scrollPane, BorderLayout.CENTER); //Adiciona o JScrollPane ao painel ChatPanel no centro do layout BorderLayout.
+        chatArea = new JTextArea(10, 40);
+        chatArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(chatArea);
+        add(scrollPane, BorderLayout.CENTER);
 
-        JPanel inputPanel = new JPanel(); //Cria um novo painel JPanel para conter os componentes de entrada de texto.
-        inputPanel.setLayout(new BorderLayout()); //Define o layout do painel inputPanel como BorderLayout.
+        JPanel inputPanel = new JPanel();
+        inputPanel.setLayout(new BorderLayout());
 
-        nameField = new JTextField(10); // Cria um JTextField que permite ao usuário inserir seu nome para identificar as mensagens que envia.
-        inputPanel.add(nameField, BorderLayout.WEST); //Adiciona o nameField no lado esquerdo do painel inputPanel.
+        nameField = new JTextField(10);
+        inputPanel.add(nameField, BorderLayout.WEST);
 
-        messageField = new JTextField(30);//Cria um JTextField que permite ao usuário inserir sua mensagem.
-        messageField.addActionListener(e -> sendMessage()); //Adiciona um ActionListener que chama o método sendMessage() quando o usuário pressiona a tecla Enter no messageField.
-        inputPanel.add(messageField, BorderLayout.CENTER); //Adiciona o messageField no centro do painel inputPanel.
+        messageField = new JTextField(30);
+        inputPanel.add(messageField, BorderLayout.CENTER);
 
-        JButton sendButton = new JButton("Send"); // Cria um botão JButton para enviar a mensagem.
-        sendButton.addActionListener(e -> sendMessage()); //Adiciona um ActionListener que chama o método sendMessage() quando o usuário clica no botão sendButton
-        inputPanel.add(sendButton, BorderLayout.EAST); // Adiciona o sendButton no lado direito do painel inputPanel.
+        JButton sendButton = new JButton("Enviar");
+        sendButton.addActionListener(e -> sendMessage());
+        inputPanel.add(sendButton, BorderLayout.EAST);
 
-        add(inputPanel, BorderLayout.SOUTH);//Adiciona o painel inputPanel na parte inferior do ChatPanel.
+        JButton helpButton = new JButton("Ajuda");
+        helpButton.addActionListener(e -> sendHelpMessage());
+        inputPanel.add(helpButton, BorderLayout.SOUTH);
 
-        Thread thread = new Thread(this::updateChat); // Cria uma nova Thread que executa o método updateChat().
-        thread.start(); //Inicia a Thread criada no passo anterior. O método updateChat() é executado continuamente em segundo plano para atualizar o chatArea com novas mensagens recebidas.
+        add(inputPanel, BorderLayout.SOUTH);
     }
 
-    private void sendMessage() {  //Método para enviar as mensagens
-        String name = nameField.getText();
-        String message = messageField.getText();
+    private void sendMessage() {
         try {
-            chatService.sendMessage(name, message);
-            messageField.setText("");
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
-    }
+            String senderName = nameField.getText();
+            String message = messageField.getText();
+            if (!message.equals("")) {
+                chatService.sendMessage(senderName, message); //envia a mensagem usando objeto ChatService
+                chatArea.append(senderName + ": " + message + "\n");//add a mensagem no ChatArea
+                messageField.setText("");//limpar messagefild
 
-    private void updateChat() { //Método para atualizar área Chat com loop infinito
-        try {
-            while (true) {
-                String chatHistory = chatService.getChatHistory();// A cada segundo, ele chama o método getChatHistory() da instância de chatService para obter o histórico de chat completo a partir do servidor de bate-papo.
-                SwingUtilities.invokeLater(() -> { //método invokeLater() da classe SwingUtilities para atualizar a área de texto do chat
-                    chatArea.setText(chatHistory);//a área de texto do chat é atualizada com o histórico de chat e a posição do cursor é definida para o final da área de texto para que o texto mais recente seja sempre visível.
-                    chatArea.setCaretPosition(chatArea.getDocument().getLength());
-                });
-                Thread.sleep(1000);
+               //Alunos
+                ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+                Aluno aluno1 = new Aluno("Pedrinho Matador", 18, "9090", "Sistemas de Informação",
+                        "berranteiro123", 9, 9, 4,2,
+                        10, "Sistemas De Informação", "matematica", "banco de dados",
+                        "redacao", "portugues", "Java", 15);
+                alunos.add(aluno1);
+
+                alunos.add(aluno1);
+
+                Aluno aluno2 = new Aluno("Lazaro", 21, "5678", "Sistemas de Informação",
+                        "outrasenha456", 5, 7, 9,8,
+                        10, "Sistemas De Informação", "matematica", "banco de dados",
+                "redacao", "portugues", "Java", 3);
+                alunos.add(aluno2);
+
+
+                //================ PERFIL ALUNO ================
+                if (message.contains("meu") && message.contains("perfil")) {
+                    chatArea.append("ChatBot: Digite sua matricula" + "\n");
+                    String matricula = JOptionPane.showInputDialog("Digite sua matricula:");
+                    String senha = JOptionPane.showInputDialog("Digite sua senha:");
+
+                    for (Aluno aluno : alunos) {
+                        if (aluno.getMatricula().equals(matricula) && aluno.getSenha().equals(senha)) {
+                            chatArea.append("Nome:" + aluno.getNome() + "\n");
+                            chatArea.append("Idade: " + aluno.getIdade() + "\n");
+                            chatArea.append("Matrícula: " + aluno.getMatricula() + "\n");
+                            chatArea.append("Senha: " + aluno.getSenha() + "\n");
+                            chatArea.append("Curso: " + aluno.getCurso() +"\n");
+                            chatArea.append("Disciplinas:\n" +
+                                    aluno.getMatematica() + " Nota:"+ aluno.getMediaMatematica() +"\n"+
+                                    aluno.getPortugues() +" Nota:"+ aluno.getMediaPortugues() +"\n"+
+                                    aluno.getBD() + " Nota:"+aluno.getMediaBD()+ "\n"+
+                                    aluno.getJava() +" Nota:"+aluno.getMediaJava() +"\n"+
+                                    aluno.getRedacao() + " Nota:"+ aluno.getMediaRedacao()+"\n");
+                            chatArea.append("Sala:" + aluno.getSala());
+                            break;
+                        }
+                    }
+                }
+               //======================== FIM PERFIL ALUNO ===========================
+
             }
-        } catch (RemoteException | InterruptedException e) {
-            e.printStackTrace();
+        } catch (RemoteException ex) {
+            System.err.println("Error sending message: " + ex.getMessage());
         }
+    }
+
+    private void sendHelpMessage() {
+        chatArea.append("ChatBot: Para enviar uma mensagem, digite seu nome no campo de texto à esquerda, digite a mensagem no campo de texto ao centro e clique no botão 'Enviar'. Para obter ajuda, clique no botão 'Ajuda'.\n");
     }
 }
-
