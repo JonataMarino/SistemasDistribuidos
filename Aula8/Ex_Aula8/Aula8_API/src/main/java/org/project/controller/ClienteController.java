@@ -4,12 +4,12 @@ import org.project.model.Cliente;
 import org.project.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+/*@Controller
 public class ClienteController {
     @Autowired
     private ClienteService clienteService;
@@ -28,5 +28,37 @@ public class ClienteController {
 @GetMapping(Constante.API_URL + "/{id}")
     public Optional<Cliente> consultarPorId(@PathVariable Cliente cliente){
         return clienteService.consultarPorId(cliente);
+    }
+}
+*/
+@RestController
+public class ClienteController {
+
+    @Autowired
+    private ClienteService clienteService;
+
+    @PostMapping(Constante.API_CLIENT)
+    public void salvar(@RequestBody Cliente client){
+        clienteService.salvar(client);
+    }
+
+    @GetMapping(Constante.API_CLIENT)
+    public List<Cliente> findAll(){
+        return clienteService.consultarTudo();
+    }
+
+    @PutMapping(Constante.API_CLIENT)
+    public void update (@RequestBody Cliente cliente){
+        clienteService.salvar(cliente);
+    }
+
+    @DeleteMapping(Constante.API_CLIENT + "/{id}")
+    public void delete(@PathVariable("id") String id){
+        clienteService.deletar(id);
+    }
+
+    @GetMapping(Constante.API_CLIENT + "/{id}")
+    public Optional<Cliente> findById(@PathVariable("id") String id){
+        return clienteService.consultarPorId(id);
     }
 }

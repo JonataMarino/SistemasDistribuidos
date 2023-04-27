@@ -6,8 +6,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
-
 @Service
+public class ClienteService {
+
+    @Autowired
+    private ClienteRepository clienteRepository;
+
+    public void salvar(Cliente cliente){
+        clienteRepository.insert(cliente);
+    }
+
+    public List<Cliente> consultarTudo (){
+        return clienteRepository.findAll();
+    }
+
+    public Optional<Cliente> consultarPorId(String id){
+        return clienteRepository.findById(id);
+    }
+
+    public void deletar(String id){
+        clienteRepository.deleteById(id);
+    }
+}
+/*@Service
 public class ClienteService {
 
     @Autowired
@@ -29,3 +50,4 @@ public class ClienteService {
     }
 
 }
+*/
