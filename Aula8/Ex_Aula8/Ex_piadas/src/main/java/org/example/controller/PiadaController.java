@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @RestController
 public class PiadaController {
@@ -15,7 +16,7 @@ public class PiadaController {
     private ClientService clientService;
 
     @PostMapping(ConstanteClient.API_PIADA)
-    public void salvarClient(@RequestBody Piada piada){
+    public void salvarPiada(@RequestBody Piada piada){
         clientService.salvarPiada(piada);
     }
 
@@ -25,12 +26,12 @@ public class PiadaController {
     }
 
     @PutMapping(ConstanteClient.API_PIADA)
-    public void updateClient (@RequestBody Piada piada){
+    public void updatePiada (@RequestBody Piada piada){
         clientService.salvarPiada(piada);
     }
 
     @DeleteMapping(ConstanteClient.API_PIADA + "/{id}")
-    public void deleteClient (@PathVariable("id")String id){
+    public void deletePiada (@PathVariable("id")String id){
         clientService.deletar(id);
     }
 
@@ -38,5 +39,13 @@ public class PiadaController {
     @GetMapping(ConstanteClient.API_PIADA + "/{id}")
     public Optional<Piada> findById(@PathVariable ("id")String id){
         return clientService.ConsultarPorId(id);
+    }
+
+    @GetMapping(ConstanteClient.API_PIADA + "/sorteio")
+    public Piada sorteioPiada() {
+        List<Piada> piadas = clientService.ConsultarTudo();
+        Random random = new Random();
+        int index = random.nextInt(piadas.size());
+        return piadas.get(index);
     }
 }
