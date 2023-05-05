@@ -20,6 +20,11 @@ public class PiadaController {
         clientService.salvarPiada(piada);
     }
 
+    @PostMapping(ConstanteClient.API_PIADA+"/list")
+    public void salvarVariasPiadas(@RequestBody List<Piada> piada){
+        clientService.salvarPiadas(piada);
+    }
+
     @GetMapping(ConstanteClient.API_PIADA)
     public List<Piada> findAll(){
         return  clientService.ConsultarTudo();
@@ -48,4 +53,14 @@ public class PiadaController {
         int index = random.nextInt(piadas.size());
         return piadas.get(index);
     }
+
+  /*  @PostMapping(ConstanteClient.API_PIADA + "/{id}/avaliar")
+    public void avaliarPiada(@PathVariable("id") String id, @RequestParam int avaliacao) {
+        Optional<Piada> piadaOptional = clientService.ConsultarPorId(id);
+        if (piadaOptional.isPresent()) {
+            Piada piada = piadaOptional.get();
+            piada.adicionarAvaliacao(avaliacao);
+            clientService.salvarPiada(piada);
+        }
+    }*/
 }
