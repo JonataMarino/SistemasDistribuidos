@@ -1,10 +1,13 @@
 package org.example.service;
 
 
+import org.example.controller.PiadaController;
 import org.example.model.Piada;
 import org.example.repository.PiadaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
@@ -33,4 +36,13 @@ public class ClientService {
     public void deletar(String id){
         piadaRepository.deleteById(id);
     }
+
+    /*public void avaliarPiada(@PathVariable("id") String id, @RequestParam int avaliacao) {
+        Optional<Piada> piadaOptional = piadaRepository.findById(id);
+        if (piadaOptional.isPresent()) {
+            Piada piada = piadaOptional.get();
+            PiadaController.adicionarAvaliacao(avaliacao);
+            clientService.salvarPiada(piada);*/
 }
+
+
