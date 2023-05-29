@@ -12,6 +12,7 @@ public class Piada {
     private String descricao;
     private int avaliacao;
     private Date dataAvaliacao;
+    private Autor autor;
 
     public Piada(String id, String descricao) {
         this.id = id;
@@ -48,6 +49,14 @@ public class Piada {
 
     public void setDataAvaliacao(Date dataAvaliacao) {
         this.dataAvaliacao = dataAvaliacao;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 }
 /*

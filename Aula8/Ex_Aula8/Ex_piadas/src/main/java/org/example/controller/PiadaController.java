@@ -15,6 +15,7 @@ public class PiadaController {
 
     private Map<String, Integer> avaliacoesPorPiada = new HashMap<String, Integer>();
     private Map<String, Date> datasAvaliacoesPorPiada = new HashMap<>();
+    private Map<String, Integer> autorDaPiada = new HashMap<String, Integer>();
 
     @PostMapping(ConstanteClient.API_PIADA)
     public void salvarPiada(@RequestBody Piada piada) {
