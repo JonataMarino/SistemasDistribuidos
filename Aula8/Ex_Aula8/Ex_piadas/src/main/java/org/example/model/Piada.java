@@ -3,21 +3,17 @@ package org.example.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Document
-public class Piada {
+public class Piada implements Serializable {
     @Id
     private String id;
     private String descricao;
     private int avaliacao;
     private Date dataAvaliacao;
     private Autor autor;
-
-    public Piada(String id, String descricao) {
-        this.id = id;
-        this.descricao = descricao;
-    }
 
     public String getId() {
         return id;

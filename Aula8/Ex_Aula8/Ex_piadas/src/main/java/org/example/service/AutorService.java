@@ -1,33 +1,31 @@
-/*package org.example.service;
+package org.example.service;
 import org.example.model.Autor;
 import org.example.repository.AutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AutorService {
     @Autowired
-    private AutorRepository autoRepository;
+    private AutorRepository autorRepository;
 
-    public void salvarPiada (Autor autor) {
-        autoRepository.insert(autor);
+    public void salvarAutor(Autor autor) {
+        autorRepository.insert(autor);
     }
 
-    public void salvarPiadas (List<Autor> autors) {
-        autors.forEach(autors -> autoRepository.insert(autors));
+    public List<Autor> ConsultarTipoTudo(){
+        return autorRepository.findAll();
     }
 
-    public List<Autor> ConsultarTudo(){
-        return autoRepository.findAll();
+    public Optional<Autor> ConsultarAutorPorId(String id){
+        return autorRepository.findById(id);
     }
 
-    public Optional<Autor> ConsultarPorId(String id){
-        return autoRepository.findById(id);
-    }
-
-    public void deletar(String id){
-        autoRepository.deleteById(id);
+    public void deletarAutor(String id){
+        autorRepository.deleteById(id);
     }
 }
-*/
+

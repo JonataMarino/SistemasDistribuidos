@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fc8e37f-6865-4499-8334-5c5c6e711e17" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteTipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteTipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/controller/AutorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Autor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Piada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Piada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Tipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Tipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/repository/AutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/repository/AutorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/AutorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QZ5KH136FMQx5xZ9W5OvCvYuph" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fc8e37f-6865-4499-8334-5c5c6e711e17" name="Changes" comment="" />
+      <created>1682423115635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682423115635</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,8 +1,12 @@
 package org.example.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class Autor {
+import java.io.Serializable;
+
+@Document
+public class Autor implements Serializable {
     @Id
     private int id;
     private String nome;

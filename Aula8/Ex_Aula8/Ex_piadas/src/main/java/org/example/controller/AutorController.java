@@ -1,5 +1,5 @@
-/*package org.example.controller;
-import org.example.constant.ConstanteTipo;
+package org.example.controller;
+import org.example.constant.ConstanteAutor;
 import org.example.model.Autor;
 import org.example.service.AutorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,31 +12,30 @@ public class AutorController {
         @Autowired
         private AutorService autorService;
 
-        @PostMapping(ConstanteTipo.API_AUTOR)
-        public void salvarTipo(@RequestBody Autor autor){
-            autorService.salvarTipo(autor);
+        @PostMapping(ConstanteAutor.API_AUTOR)
+        public void salvarAutor(@RequestBody Autor autor){
+            autorService.salvarAutor(autor);
         }
 
-        @GetMapping(ConstanteTipo.API_TIPO)
+        @GetMapping(ConstanteAutor.API_AUTOR)
         public List<Autor> findAll(){
             return  autorService.ConsultarTipoTudo();
         }
 
-        @PutMapping(ConstanteTipo.API_TIPO)
-        public void updateTipo (@RequestBody Autor autor){
-            autorService.salvarTipo(tipo);
+        @PutMapping(ConstanteAutor.API_AUTOR)
+        public void updateAutor (@RequestBody Autor autor){
+            autorService.salvarAutor(autor);
         }
 
-        @DeleteMapping(ConstanteTipo.API_TIPO + "/{id}")
+        @DeleteMapping(ConstanteAutor.API_AUTOR + "/{id}")
         public void delete (@PathVariable("id")String id){
-            autorService.deletarTipo(id);
+            autorService.deletarAutor(id);
         }
 
-        @GetMapping(ConstanteTipo.API_TIPO + "/{id}")
+        @GetMapping(ConstanteAutor.API_AUTOR + "/{id}")
         public Optional<Autor> findById(@PathVariable ("id")String id){
-            return autorService.ConsultarTipoPorId(id);
+            return autorService.ConsultarAutorPorId(id);
         }
 
     }
-}
-*/
+

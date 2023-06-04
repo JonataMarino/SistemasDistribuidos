@@ -1,5 +1,6 @@
 package org.example.service;
 import org.example.model.Piada;
+import org.example.rabbit.PiadaProducer;
 import org.example.repository.PiadaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,9 @@ import java.util.Optional;
 public class ClientService {
     @Autowired
     private PiadaRepository piadaRepository;
+
+    @Autowired
+    PiadaProducer piadaProducer;
 
     public void salvarPiada (Piada piada) {
         piadaRepository.insert(piada);
