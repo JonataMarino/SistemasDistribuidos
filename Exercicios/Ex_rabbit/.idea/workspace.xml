@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fc8e37f-6865-4499-8334-5c5c6e711e17" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteTipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/constant/ConstanteTipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/controller/AutorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/controller/AutorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Autor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Autor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Piada.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Piada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Tipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/model/Tipo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/repository/AutorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/repository/AutorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/AutorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/AutorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/java/org/example/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Aula8/Ex_Aula8/Ex_piadas/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="0fc8e37f-6865-4499-8334-5c5c6e711e17" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
