@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Document
 public class Atendimento implements Serializable {
-    @Id
+
     private String id;
     private String descricaoAtendimento;
     private Proprietario proprietario;

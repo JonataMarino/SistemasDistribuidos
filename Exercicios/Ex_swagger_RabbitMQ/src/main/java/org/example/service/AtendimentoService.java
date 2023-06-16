@@ -1,6 +1,6 @@
 package org.example.service;
 import org.example.model.Atendimento;
-import org.example.rabbit.ServicoProducer;
+import org.example.rabbit.AtendimentoProducer;
 import org.example.repository.AtendimentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,15 +13,14 @@ public class AtendimentoService {
     private AtendimentoRepository atendimentoRepository;
 
     @Autowired
-    ServicoProducer servicoProducer;
+    AtendimentoProducer atendimentoProducer;
 
-    public void salvarAtendimento(Atendimento atendimento) {
-        atendimentoRepository.insert(atendimento);
+    public void sendAtendimentoRabbit(Atendimento atendimento){
+        atendimentoProducer.send(atendimento);
     }
-
-    //public void salvarAtendimentos (List<Atendimento> atendimentos) {
-    //    piadas.forEach(atendimentos -> atendimentoRepository.insert(atendimento));
-    //}
+    public void salvarAtendimento(Atendimento atendimento) {
+        atendimentoRepository.save(atendimento);
+    }
 
     public List<Atendimento> ConsultarTudo(){
         return atendimentoRepository.findAll();

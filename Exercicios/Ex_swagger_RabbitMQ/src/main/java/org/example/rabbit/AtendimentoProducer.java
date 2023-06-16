@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ServicoProducer {
+public class AtendimentoProducer {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
     @Autowired
     private Queue queue;
 
-    public void send(Atendimento piada){
-        rabbitTemplate.convertAndSend(this.queue.getName(), piada);
+    public void send(Atendimento atendimento){
+        rabbitTemplate.convertAndSend(this.queue.getName(), atendimento);
     }
 }

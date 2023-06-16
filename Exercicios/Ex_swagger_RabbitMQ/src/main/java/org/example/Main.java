@@ -11,14 +11,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Main {
 
-    @Value("${queue.piada.descricao}")
-    private String piadaQueue;
+    @Value("${queue.atendimento.descricaoAtendimento}")
+    private String atendimentoQueue;
     public static void main(String[] args) {
         SpringApplication.run(Main.class,args);
         System.out.println("Na minha máquina Funciona");
     }
         @Bean
         public Queue queue(){
-            return new Queue(piadaQueue, true);
+            return new Queue(atendimentoQueue, true);
         }
     }
